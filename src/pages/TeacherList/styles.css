@@ -46,18 +46,32 @@
     bottom: 0;
 }
 
+#page-teacher-list main {
+    margin: 3.2rem auto;
+    width: 90%;
+}
+
+.teacher-item footer button:hover {
+    background: var(--color-secundary-dark);
+}
+
 @media (min-width: 700px) {
-    #page-teacher-list {
-        max-width: 100%;
+    .teacher-item header, .teacher-item footer {
+        padding: 3.2rem;
     }
-    #search-teachers {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 16px;
-        position: absolute;
-        bottom: -30px;
+    .teacher-item>p {
+        padding: 0 3.2rem;
     }
-    #search-teachers .input-block+.input-block {
-        margin-top: 0;
+    .teacher-item footer p strong {
+        display: initial;
+        margin-left: 1.6rem;
+    }
+    .teacher-item footer button {
+        width: 24.5rem;
+        font-size: 1.6rem;
+        justify-content: center;
+    }
+    .teacher-item footer button img {
+        margin-right: 1.6rem;
     }
 }
