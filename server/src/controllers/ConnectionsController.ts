@@ -1,14 +1,17 @@
 import { Request, Response } from 'express';
 import db from '../database/connection';
 
-export default class ConnectionsController {
+export default {
     async index(request: Request, response: Response) {
-        const totalConnections = await db('connections').count('* as total');
+        const totalConnections = await db('connections').count('id as total');
 
         const { total } = totalConnections[0];
 
-        return response.json({ total });
-    }
+        return response.status(200).json({
+            total
+        })
+    },
+
     async create(request: Request, response: Response) {
         const { user_id } = request.body;
 
@@ -16,6 +19,8 @@ export default class ConnectionsController {
             user_id,
         });
 
-        return response.status(201).send();
+        return response.status(201).json({
+            'message': 'Success'
+        })
     }
 }
