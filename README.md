@@ -3,9 +3,7 @@
 </h3>
 
 <h3 align="center">
-  <img alt="Web Project" title="Escola Connecta" src="./imgMocks/webMock.svg" width="600px"/>
-  <img alt="Mobile project" title="Escola Connecta" src="./imgMocks/mobileMock.svg" width="400px"/>
-
+  <img alt="Web Project" title="Escola Connecta" src="./imgMocks/webMock.svg" width="800px"/>
 </h3>
 
 ## :book:    About the project
