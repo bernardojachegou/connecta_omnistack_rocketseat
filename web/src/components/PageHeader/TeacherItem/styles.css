@@ -72,6 +72,10 @@
     text-decoration: none;
 }
 
+.teacher-item footer a:hover {
+    background: var(--color-secundary-dark);
+}
+
 @media (min-width: 700px) {
     .teacher-item header, .teacher-item footer {
         padding: 3.2rem;
