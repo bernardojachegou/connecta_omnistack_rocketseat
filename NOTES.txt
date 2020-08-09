@@ -1,0 +1,143 @@
+#########################################################################
+-----------------------------O-PROJETO-WEB-------------------------------
+#########################################################################
+1. Criação do projeto com React
+	1.1 npx create-react-app nome_projeto (Criação o projeto);
+	1.2 Remoção de arquivos (Não utilizáveis);
+	1.3 Teste da aplicação (npm start);
+	1.4 Explicação sobre componentes (Base do React);
+
+2. Iniciando o projeto com o pensamento: mobile first
+	2.1 Importação de imagens e css (assets/:root);
+	2.2 Configurações globais no css (reset);
+	2.3 Utilização de medida responsiva (rem[font-size] :root);
+
+3. Criação da primeira Page
+	3.1 Criação da landing-page;
+	3.2 Importação da logo;
+	3.3 Aplicação do CSS;
+	3.4 Aplicação do grid (columns, rows and area)
+
+4. Configuração de navegação com react-router-dom
+	4.1 Criação do arquivo Routes;
+	4.2 Configuração do BrowserRouter & Route;
+	4.3 Carregamento de componentes com Link to;
+
+5. Reutilização de componentes
+	5.1 Criação do componente PageHeader;
+	5.2 Criação de propriedade para modificação do PageHeader;
+	5.3 Especificação de propriedades (Const + Arrow Function);
+	5.4 Declaração de interface para especificação das propriedades;
+	5.5 Utilização do React.FC<param> / props;
+
+6. Criação da página de professores
+	6.1 Estilização da página;
+	6.2 Utilização do :focus-within;
+	6.3 Reaproveitamento de component: TeacherItem;
+	6.4 Estilização do css da página;
+	
+#########################################################################
+--------------------------------O-BACKEND--------------------------------
+#########################################################################
+1. Inicialização do Server
+	1.1 Explicação sobre backend (API);
+	1.2 npm init -Y (Arquivo packge.json);
+	1.3 Criação do arquivo Server.ts (src);
+	1.4 Instalação do ts-node-dev (flags: transpile-ignore-respawn);
+	1.5 Instalação do express;
+
+2. Explicação sobre Rotas/Recursos/Parâmetros
+	2.1 Explicação sobre Métodos HTTP e Insomnia;
+	2.3 Utilização de parâmetros:
+	2.* Request body: Dados para criação/atualização de registro;
+	2.* Router params: Identificar qual o recurso atualizar/deletar;
+	2.* Query params: Utilizados para filtrar dados da rota;
+
+3. Configuração do banco de dados
+	3.1 Instalação do Knex e SQLite3;
+	3.2 Configuração de script para knex migrations;
+	3.3 Instalação extensão para SQLite.
+	3.4 Criação das tabelas e uso de migrations;
+
+4. Criação do CREATE da aplicação
+	4.1 Rota de cadastro de aulas/professor;
+	4.2 Descrição do JSON dentro do Insomnia;
+	4.3 Criação de interface para definição de tipo de dados;
+	4.4 Criação função para a conversão horas em minutos;
+	4.5 Trabalho com transaction (evitar problemas na inserção);
+	4.* Variável trx(db.transaction) + trx(commit);
+	4.6 Tratamento de error com try/catch (genérico);
+
+5. Criação do READ da aplicação
+	5.1 Variável para filtrar dados (query params);
+	5.2 Criação das query para buscar os dados;
+	5.3 Relacionamento entre tabelas com join;
+	5.4 Criação de condicionais com whereRaw;
+	5.5 Criação das rotas de connections;
+	5.6 Aplicação do cors para integração com o frontend;
+#########################################################################
+----------------------FINALIZAÇÃO-DO-PROJETO-WEB-------------------------
+#########################################################################
+1. Trabalhando a página de formulário
+	1.1 Configuração de nova descrição com props(interface);
+	1.2 If com o o perador &&;
+	1.3 Configuração do Css da página de cadastro;
+
+2. Criação de componente parâmetros
+	2.1 Padronização do componente Input;	
+	2.2 parâmetros do Input através da interface;
+	2.3 InputHTMLAttributes para ativar os atributos do input;
+	2.4 Utilização do Input passando os parâmetros utilizados;
+
+3. Criação do componente Textarea & Select
+	3.1 Copia e aproveitamento do conteúdo de componentes existentes;
+	3.2 Criação do componente select, interface com array<obj+tipo>;
+	3.3 For para exibição das opções do select usando .map;	
+
+4. Finalização da página de cadastro
+	4.1 Aproveitamento dos components para os Selects da página;
+	4.2 Refatoração do CSS;
+	4.3 Ajustes finais relacionados a página;
+
+5. Trabalho com useState
+	5.1 Importação do useState do React;
+	5.2 Criação da variável com useState;
+	5.3 Criação da função de adição do novo elemento;
+	5.4 Passagem de parâmetros do useState (restOp, newArray);
+	5.5 Aplicação da função no botão (onClick) = Mágica acontece!;
+
+6. Conexão do frontend com a API
+	6.1 Instalação do axios (Consumo de API externa);
+	6.2 Criação da pasta services/api.ts;
+	6.3 Importação do axios/const api + axios.create(baseURL);
+
+7. Integração das requisições com o backend
+	7.1 Apresentação de dados do backend na LandingPage:
+	7.* Utilização do useState/useEffect(parâmetros) + promises;
+	7.2 Criação de dados na página de cadastro:
+	7.* Uso do onChange[AF(event) =>set(event.target.value)];
+	7.3 Crição da lógica para atualização do week_day/cost;
+	7.* Função crua (Utilização de array e .map());
+	7.4 Envio de dados com post(cadastro);
+#########################################################################
+----------------------DESENVOLVIMENTO-DO-MOBILE--------------------------
+#########################################################################
+1. Criação do projeto mobile
+	1.1 Expo init para iniciar o projeto;
+	1.2 Instalação do expo (app);
+	1.3 Importação de imagens png com @types/index.d.ts;
+	1.4 Elaboração da LandingPage (index/styles);
+
+2. Criação das rotas do projeto
+	2.1 Instalações do react-navigation/native;
+	2.2 stack-navigation: Navegação em forma de pilha;
+	2.3 Configurações das rotas da mesma forma que no React;
+	2.4 Criação de funções para navegação onPress;
+
+3. Criação de navegação em abas
+	3.1 Utilização do bottom-tabs;
+	3.2 Novo arquivo de rotas (StudyTabs);
+	3.3 Navegação entre páginas dentro do novo arquivo;
+	3.4 Importação do arquivo StudyTabs dentro do AppStack;
+
+	
